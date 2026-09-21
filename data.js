@@ -53,7 +53,7 @@ function parseItemData(text) {
         const title = fields[1];
         
         // Extract genres (last 19 fields)
-        const genreValues = fields.slice(5, 24).map(value => parseInt(value));
+        const genreValues = fields.slice(6, 24).map(value => parseInt(value));
         const genres = genreNames.filter((_, index) => genreValues[index] === 1);
         
         movies.push({ id, title, genres });
